@@ -1,0 +1,105 @@
+/* Section */
+section {
+    position: relative; /* Allow section to affect document flow */
+    width: 100%;
+    display: block; /* Ensure section takes up full width */
+    overflow: hidden; /* Contain floating elements */
+    padding-bottom: 30%;
+}
+
+/* Images in Section */
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Text in Section */
+section div {
+    position: relative;
+    color: white;
+    margin: 3% 45% 0 3%;
+    font-size: 150%;
+    z-index: 2;
+}
+
+/* Product Container */
+.productcontainer {
+    margin: 0 5% 5% 5%;
+    z-index: 2;
+    display: flex; /* Use Flexbox to align items horizontally */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+.containertitle{
+    text-align: center;
+    font-size: 5em;
+    color: #301862;
+
+}
+
+/* Product */
+.product {
+    width: 20%;
+    align-items: center;
+    text-align: center;
+    background-color: #301862; /* Background color */
+    border-radius: 15px;
+    color: white;
+    padding: 2%;
+}
+
+.product img{
+    top: 20px;
+    position: static;
+}
+
+.product button{
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 1;
+  transition: 100ms linear;
+}
+
+
+
+.product button:hover {
+    background-color: white;
+    color: #301862;
+}
+
+.details{
+    background-color: #301862;
+    color: white;
+    width: 100%;
+    margin: 0;
+    display: flex; /* Use Flexbox to align items horizontally */
+    justify-content: space-around;
+    padding: 1% 0 1% 0;
+}
+
+.details div{
+padding: 2%;
+
+}
+.details div:not(:first-child){
+
+    border-left: 1px white solid;
+}
+

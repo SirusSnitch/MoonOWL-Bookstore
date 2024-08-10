@@ -1,3 +1,13 @@
 import { Routes } from '@angular/router';
+import { AuthComponent } from './website/auth/auth.component';
+import { BookDetailsComponent } from './website/book-details/book-details.component';
+import { CartComponent } from './website/cart/cart.component';
+import { HomeComponent } from './website/home/home.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    {path: '' , component: HomeComponent},
+    {path: 'auth' , component: AuthComponent},
+    /* {path: '', redirectTo: '/auth', pathMatch: 'full'}, */
+    {path: 'book' , component: BookDetailsComponent},
+    {path: 'cart' , component: CartComponent},
+];

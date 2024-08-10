@@ -1,0 +1,30 @@
+
+
+.navlink{
+    padding: 2% 0 3% 0;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #010133;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    text-align: right;
+    
+    
+} 
+
+.navright {
+    text-align: right;
+}
+.navleft{
+    float: left;
+}
+.navlink a{
+    margin: 0 2% 0 2%;
+    padding: 5px;
+    color: white;
+    font-size: 120%;
+    text-decoration: none;
+
+}
