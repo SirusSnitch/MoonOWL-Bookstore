@@ -1,0 +1,42 @@
+.book{
+    display: flex;
+    width: 100%;
+    background-color: #301862;
+}
+
+.bookimage{
+    margin: 5%;
+    border: 2px solid white;
+    width: 50%;
+}
+
+.bookdesc{
+    margin: 5%;
+    color: white;
+    width: 50%;
+}
+
+.bookdesc button{
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    z-index: 1;
+    transition: 100ms linear;
+  }
+  
+  
+  
+  .bookdesc button:hover {
+      background-color: white;
+      color: #301862;
+  }
