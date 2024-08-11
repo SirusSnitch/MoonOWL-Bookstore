@@ -1,27 +1,28 @@
 import { Component } from '@angular/core';
-import { SignupComponent } from '../signup/signup.component';
+import { AuthComponent } from '../auth/auth.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-auth',
+  selector: 'app-signup',
   standalone: true,
   imports: [],
-  templateUrl: './auth.component.html',
-  styleUrl: './auth.component.css'
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.css'
 })
-export class AuthComponent {
+export class SignupComponent {
 
   constructor(
-    public dialogRef: MatDialogRef<AuthComponent>,
+    public dialogRef: MatDialogRef<SignupComponent>,
     public dialog: MatDialog
   ) { }
 
-  openSignUp(): void {
+  openLogin(): void {
     this.dialogRef.close(); // Close the current dialog
-    this.dialog.open(SignupComponent, {
+    this.dialog.open(AuthComponent, {
       width: '90%',
       data: { /* Pass data if needed */ }
     });
   }
+
 
 }

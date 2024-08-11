@@ -52,7 +52,12 @@ section div {
     border-radius: 15px;
     color: white;
     padding: 2%;
+    cursor: pointer;
 }
+/* .product:hover{
+    width: 20%;
+    transition: 100ms linear;
+} */
 
 .product img{
     top: 20px;
