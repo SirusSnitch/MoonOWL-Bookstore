@@ -6,8 +6,5 @@ import { HomeComponent } from './website/home/home.component';
 
 export const routes: Routes = [
     {path: '' , component: HomeComponent},
-    {path: 'auth' , component: AuthComponent},
-    /* {path: '', redirectTo: '/auth', pathMatch: 'full'}, */
-    {path: 'book' , component: BookDetailsComponent},
     {path: 'cart' , component: CartComponent},
 ];

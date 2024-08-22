@@ -1,17 +1,17 @@
 <div>
     <h2>Login</h2>
-    <form action="post">
+    <form (ngSubmit)="onLoginSubmit(form)" #form="ngForm" novalidate>
         <div class="txtf">
-            <input type="text" required>
+            <input type="email" name="email" ngModel required>
             <span></span>
-            <label>Username</label>
+            <label>E-mail</label>
         </div>
         <div class="txtf">
-            <input type="password" required>
+            <input type="password" name="password" ngModel required>
             <span></span>
             <label>Password</label>
         </div>
         <input type="submit" value="LOGIN" class="btn">
     </form>
-    <p>Not a membre? <a (click)="openSignUp()">Sign up Now</a></p>
+    <p>Not a member? <a (click)="openSignUp()">Sign up Now</a></p>
 </div>

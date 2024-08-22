@@ -64,6 +64,12 @@ section div {
     position: static;
 }
 
+.product .title{
+
+  height: 3em;
+/* 2 lines * line-height */
+}
+
 .product button{
   font-size: 16px;
   font-weight: 200;
@@ -88,6 +94,16 @@ section div {
     background-color: white;
     color: #301862;
 }
+
+.product p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 3; /* Limit to 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5em; /* Adjust line height as needed */
+    max-height: 4.5em; /* 3 lines * line-height */
+  }
 
 .details{
     background-color: #301862;

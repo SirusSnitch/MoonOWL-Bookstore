@@ -16,29 +16,22 @@
 <!-- Cards -->
 <h2 class="containertitle" id="books">Books</h2>
 <div class="productcontainer">
-    
-    <div class="product" (click)="openDialog()">
+    @for (Book of books; track $index) {
+    <div class="product" (click)="openDialog(Book._id)" >
         <img src="assets/book.png" alt="" width="60%">
-        <h3>Book Title</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veritatis incidunt pariatur ipsa</p>
-        <h3>Price: 20</h3>
-        <button>Add to Cart</button>
-        
+        <h3 class="title">{{ Book.title }}</h3>
+        <hr>
+        <p>{{ Book.description }}</p>
+        <h3>Price: {{ Book.price }}</h3>    
     </div>
-    <div class="product" (click)="openDialog()">
-        <img src="assets/book.png" alt="" width="60%">
-        <h3>Book Title</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veritatis incidunt pariatur ipsa</p>
-        <h3>Price: 20</h3>
-        <button>Add to Cart</button>
-        
-    </div>
-    <div class="product" (click)="openDialog()">
+    }
+
+<!--     <div class="product" (click)="openDialog()">
         <img src="assets/book.png" alt="" width="60%">
         <h3>Book Title</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veritatis </p>
         <h3>Price: 20</h3>
-        <button>Add to Cart</button>
+
         
     </div>
     <div class="product" (click)="openDialog()">
@@ -46,7 +39,7 @@
         <h3>Book Title</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         <h3>Price: 20</h3>
-        <button>Add to Cart</button>
+   
         
     </div>
     <div class="product" (click)="openDialog()">
@@ -54,9 +47,9 @@
         <h3>Book Title</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         <h3>Price: 20</h3>
-        <button>Add to Cart</button>
+   
         
-    </div>
+    </div> -->
 </div>
 
 <!-- details -->

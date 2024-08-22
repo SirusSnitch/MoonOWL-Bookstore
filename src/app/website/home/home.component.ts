@@ -1,23 +1,39 @@
 import { Component, ElementRef, ViewChild, HostListener, AfterViewInit } from '@angular/core';
 import { BookDetailsComponent } from '../book-details/book-details.component';
 import { MatDialog } from '@angular/material/dialog';
+import { WebService } from '../web.service';
+import { Book } from '../book';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements AfterViewInit {
   @ViewChild('stars', { static: false }) stars!: ElementRef;
 
+  books: Book[] = [];
+
+  constructor( private dialog: MatDialog, private webService: WebService) {  }
 
   ngAfterViewInit() {
     // Now you can access the element using this.stars.nativeElement
     this.applyParallaxEffect();
+
+    this.webService.getAllBooks().subscribe((books) => {
+      this.books = books;
+    });
+   
+ 
   }
+
+  
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event) {
@@ -29,12 +45,14 @@ export class HomeComponent implements AfterViewInit {
     this.stars.nativeElement.style.transform = `translateX(${scrollPosition * -0.7}px)`;
   }
 
-  constructor(public dialog: MatDialog) { }
 
-  openDialog(): void {
+
+  
+
+  openDialog(bookId: string): void {
     const dialogRef = this.dialog.open(BookDetailsComponent, {
       width: '90%',
-      data: { /* You can pass data to the dialog here if needed */ }
+      data: { id: bookId }
     });
 
     dialogRef.afterClosed().subscribe(result => {

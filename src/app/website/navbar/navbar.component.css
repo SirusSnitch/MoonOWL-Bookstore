@@ -13,6 +13,7 @@
     cursor: pointer;
     
     
+    
 } 
 
 .navright {
@@ -25,7 +26,44 @@
     margin: 0 2% 0 2%;
     padding: 5px;
     color: white;
-    font-size: 120%;
+    font-size: 140%;
     text-decoration: none;
 
 }
+
+.navlink select{
+    margin: 0 2% 0 2%;
+    padding: 5px;
+    color: white;
+    font-size: 140%;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    appearance: none; /* Remove the default dropdown styling */
+    -webkit-appearance: none; /* Cross-browser support */
+    -moz-appearance: none;
+    cursor: pointer;
+
+}
+
+.navlink select option{
+    background-color: #010133;
+    cursor: pointer;
+    padding: 10px; /* Add some padding for better spacing */
+    font-size: 1.2rem;
+}
+
+.navlink select option:hover{
+    background-color: #301862;
+    cursor: pointer;
+}
+
+.cart{
+    filter: invert(100%);
+    width: 3%;
+    position: relative;
+    top: 10px;
+}
+
+

@@ -2,16 +2,28 @@
     <nav class="navlink" id="home">
         
             <a href="#home" class="navleft">
-                <img src="assets/logo.png" alt="logo" width="100rem">
+                <img src="assets/logo.png" alt="logo" width="130rem">
             </a>
         
-            <a href="#home" class="nav-link">Home</a>
+            <a href="#home" >Home</a>
                     
-            <a href="#about" class="nav-link">About Us</a>
+            <a href="#about" >About Us</a>
                     
-            <a href="#books" class="nav-link">Books</a>
+            <a href="#books" >Books</a>
                     
-            <a class="nav-link" (click)="openDialog()">Login</a>
+            <a *ngIf="!userName" (click)="openDialog()">Login</a>
+            
+            <!-- User's name as a clickable dropdown trigger -->
+            <select *ngIf="userName" class="username-select" (change)="handleUserAction($event)">
+                <option [value]="userName" selected disabled hidden>{{ userName }}</option>
+                <option value="admin">Admin</option>
+                <option value="logout">Logout</option>
+            </select>
+
+
+            <a href="/cart" class="nav-link">
+                <img src="assets/cart.png" alt="" class="cart">
+            </a>
             
         
     </nav>

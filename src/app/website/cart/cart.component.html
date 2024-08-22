@@ -1,1 +1,22 @@
-<p>cart works!</p>
+<div class="cart-container">
+  <h2>Your Cart</h2>
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <p>Your cart is empty.</p>
+  </div>
+  <div *ngIf="cartItems.length > 0">
+    <ul>
+      <li *ngFor="let item of cartItems; let i = index">
+        <div class="cart-item">
+          <span>{{ item.title }}</span>
+          <span>\${{ item.price }}</span>
+          <input type="number" [value]="item.quantity" (input)="updateQuantity(i, $event)" min="1">
+          <button (click)="removeItem(i)">Remove</button>
+        </div>
+      </li>
+    </ul>
+    <div class="cart-total">
+      <p>Total: \${{ totalPrice }}</p>
+    </div>
+    <button class="confirm-btn" (click)="confirmOrder()">Confirm Order</button>
+  </div>
+</div>

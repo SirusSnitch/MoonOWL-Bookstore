@@ -1,11 +1,11 @@
-<div class="book">
+<div class="book" *ngIf="book">
     <div class="bookimage">
         <img src="assets/book.png" alt="" width="100%">
     </div> 
     <div class="bookdesc">
-        <h3>Book Title</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        <h3>Price: 20</h3>
-        <button>Add to Cart</button>
-    </div>
+        <h3>{{ book.title }}</h3>
+        <p>{{ book.description }}</p>
+        <h3>Price: {{ book.price }}</h3>
+        <button (click)="addToCart(book)">Add to Cart</button>
+      </div>
 </div>
