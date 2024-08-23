@@ -1,3 +1,5 @@
+![Logo](./src/assets/logo.png)
+
 # MoonOWL Bookstore Frontend
 
 Welcome to the frontend repository of **MoonOWL Bookstore** — a sleek and minimalistic online bookstore developed using Angular. This project allows users to browse books, view details, add items to a shopping cart, and manage user authentication.
@@ -9,6 +11,7 @@ Welcome to the frontend repository of **MoonOWL Bookstore** — a sleek and mini
 - [Running the Application](#running-the-application)
 - [Backend Repository](#backend-repository)
 - [License](#license)
+- [Screenshots](#screenshots)
 
 ## Features
 - Browse and view details for available books
@@ -28,7 +31,7 @@ Welcome to the frontend repository of **MoonOWL Bookstore** — a sleek and mini
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/SirusSnitch/MoonOWL-Bookstore.git
-   cd moonowl-bookstore-frontend
+   cd MoonOWL-Bookstore
    ```
 
 2. **Install dependencies:**
@@ -54,3 +57,9 @@ The backend for the MoonOWL Bookstore, which handles user authentication, book d
 ## License
 
 This project is licensed under the Apache License 2.0. See the [LICENSE](License.txt) file for details.
+
+## Screenshots
+
+![Screenshot 1](./src/assets/Screenshot%201.png) ![Screenshot 2](./src/assets/Screenshot%202.png)
+
+![Screenshot 3](./src/assets/Screenshot%203.png) ![Screenshot 4](./src/assets/Screenshot%204.png)
